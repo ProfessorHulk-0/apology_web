@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry My Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff3cd;
+            padding: 50px;
+        }
+        .container {
+            background: #ffeb99;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #ffcc00;
+        }
+        button {
+            background-color: #ffcc00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            background-color: #e6b800;
+            transform: scale(1.1);
+        }
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png" alt="Psyduck Teddy">
+        <h1>I'm Sorry, Deepika (Pagli❤️)</h1>
+        <p id="message">Please forgive me, Deepika (Pagli❤️). I can't bear to see you upset.</p>
+        <button id="forgive-btn" onclick="forgiveMe()">I Forgive You</button>
+        <button id="not-forgive-btn" onclick="notForgiven()">I Am Not Forgiving</button>
+    </div>
+
+    <script>
+        let count = 0;
+        const quotes = [
+            "Love is not about how many days, months, or years we have been together. Love is about how much we love each other every single day.",
+            "In your arms is where I belong. Please let me back in, my love.",
+            "No words can express how deeply sorry I am. But my heart beats only for you."
+        ];
+
+        function notForgiven() {
+            if (count < quotes.length - 1) {
+                document.getElementById("message").innerText = quotes[count];
+                count++;
+            } else {
+                document.getElementById("message").innerText = "I love you so much.";
+                document.getElementById("not-forgive-btn").style.display = 'none';
+            }
+        }
+
+        function forgiveMe() {
+            document.getElementById("message").innerText = "Thank you for forgiving me, my love! ❤️";
+        }
+    </script>
+</body>
+</html>
